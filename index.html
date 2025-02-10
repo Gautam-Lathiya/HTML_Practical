@@ -15,58 +15,94 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
             <div class="row w-100">
-                <div class="col-0 col-sm-2"></div>
-                <div class="col-12 col-md-4 d-flex align-items-center">
-                    <!-- Logo -->
-                    <a class="navbar-brand me-3" href="#">
-                        <img src="images/flipkart_logo.svg" alt="" style="height: 40px;">
-                    </a>
-                
-                    <!-- Search Bar -->
-                    <div class="input-group flex-grow-1">
-                        <input type="text" class="form-control d-none d-sm-block" placeholder="Search your product" aria-label="Search" aria-describedby="search-icon">
-                        <span class="input-group-text" id="search-icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </div>
-                </div>
+                <!-- Logo, Search and Toggle Button section -->
+                <div class="col-12 col-md-8 d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center flex-grow-1">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="#">
+                            <img src="images/flipkart_logo.svg" alt="" style="height: 40px;">
+                        </a>
 
-                <div class="col-12 col-md-4 d-flex align-items-middle">
-                    <button class="navbar-toggler bg-light w-100" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- Search Bar -->
+                        <div class="input-group flex-grow-1">
+                            <input type="text" class="form-control d-search-show" placeholder="Search your product" aria-label="Search" aria-describedby="search-icon">
+                            <button class="btn btn-light d-none d-search-hide search-icon-btn" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <span class="input-group-text d-search-show" id="search-icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Toggle button for mobile -->
+                    <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                </div>
+
+                <!-- Navigation Items for medium and larger screens -->
+                <div class="col-md-4 d-none d-md-flex align-items-center justify-content-end">
+                    <ul class="navbar-nav flex-row gap-3">
+                        <!-- Login -->
+                        <li class="nav-item">
+                            <a class="nav-link text-primary text-center bg-light" style="width:100px;height:40px;" href="#" id="login" role="button">
+                                Login
+                            </a>
+                        </li>
+                        <!-- More -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-light text-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">About us</a></li>
+                                <li><a class="dropdown-item" href="#">Contact us</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <!-- Cart -->
+                        <li class="nav-item">
+                            <a class="nav-link text-light text-center" style="width:70px;height:40px;padding-left:0px;" href="#" id="cart" role="button">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Collapsible content for mobile only -->
+                <div class="col-12 d-md-none">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Login, More, Cart -->
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-end">
-                            <!-- Login -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <!-- Mobile Login -->
                             <li class="nav-item">
-                                <a class="nav-link text-primary text-center bg-light" style="width:100px;height:40px;" href="#" id="login" role="button" aria-expanded="false">
+                                <a class="nav-link text-primary text-center bg-light" href="#" id="login-mobile">
                                     Login
                                 </a>
                             </li>
-                            <!-- More -->
+                            <!-- Mobile More -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-light text-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     More
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMobile">
                                     <li><a class="dropdown-item" href="#">About us</a></li>
                                     <li><a class="dropdown-item" href="#">Contact us</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <!-- Cart -->
+                            <!-- Mobile Cart -->
                             <li class="nav-item">
-                                <a class="nav-link text-light text-center" style="width:70px;height:40px;padding-left:0px;" href="#" id="cart" role="button" aria-expanded="false">
+                                <a class="nav-link text-dark" href="#" id="cart-mobile">
                                     <i class="fas fa-shopping-cart"></i> Cart
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-            </div> <!-- row -->
+            </div>
         </div>
     </nav>
       

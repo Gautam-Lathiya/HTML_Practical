@@ -228,3 +228,126 @@ body {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
+
+/* Navbar toggle button styling */
+.navbar-toggler {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Collapsed menu styling */
+.navbar-collapse {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-collapse .nav-item {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.navbar-collapse .nav-link {
+    padding: 8px 15px;
+}
+
+/* Adjust dropdown items in mobile view */
+@media (max-width: 767px) {
+    .navbar-collapse .dropdown-menu {
+        border: none;
+        background: none;
+        padding-left: 15px;
+    }
+
+    .navbar-collapse .dropdown-item {
+        color: #666;
+        padding: 8px 15px;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .navbar > .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Gap between nav items in desktop view */
+@media (min-width: 768px) {
+    .gap-3 {
+        gap: 1rem !important;
+    }
+}
+
+/* Custom breakpoint for search bar */
+@media (min-width: 925px) {
+    .d-search-show {
+        display: block !important;
+    }
+    
+    .d-search-hide {
+        display: none !important;
+    }
+
+    .input-group {
+        max-width: 500px;
+    }
+    
+    .input-group .form-control {
+        background-color: white;
+    }
+    
+    .input-group-text {
+        background-color: white;
+        border-left: none;
+        display: flex !important;
+    }
+}
+
+@media (max-width: 924px) {
+    .d-search-show {
+        display: none !important;
+    }
+    
+    .d-search-hide {
+        display: block !important;
+    }
+
+    .input-group {
+        width: auto;
+        margin-left: 10px;
+    }
+}
+
+/* Rest of the search styling remains the same */
+.search-icon-btn {
+    background-color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon-btn:hover,
+.search-icon-btn:focus {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
